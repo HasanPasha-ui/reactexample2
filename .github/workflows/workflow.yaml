@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  automated building and deployment:
+  automated-building-and-deployment:
       runs-on: ubuntu-latest
       steps:
 
@@ -24,9 +24,9 @@ jobs:
         - name: building build/dist folder
           run: npm run build
 
-        - name: uploading to s3.
-            uses: shallwefootball/s3-upload-action@master
-            with:
+        #- name: uploading to s3.
+        - uses: shallwefootball/s3-upload-action@master
+          with:
             aws_key_id: ${{ secrets.ACCESS_KEY }}     
             aws_secret_access_key: ${{ secrets.SECRET_ACCESS_KEY}}
             aws_bucket: ${{ secrets.BUCKET_NAME }}
