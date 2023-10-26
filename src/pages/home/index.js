@@ -9,6 +9,7 @@ export const Home = () => {
   return (
     <HelmetProvider>
       <section id="home" className="home">
+        <p>hasan drip</p>
         <Helmet>
           <meta charSet="utf-8" />
           <title> {meta.title}</title>
